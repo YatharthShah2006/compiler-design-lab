@@ -15,16 +15,6 @@ public class GJDepthFirst<R,A> implements GJVisitor<R,A> {
    // Auto class visitors--probably don't need to be overridden.
    //
 	
-	int maxTempCount, tempCount;
-	boolean firstpass, printLabel;
-	Stack<String> callArgStack = new Stack<>();
-	
-	private String generate_temp() {
-		String temp = "TEMP " + tempCount;
-		tempCount++;
-		return temp;
-	}
-	
    public R visit(NodeList n, A argu) {
       R _ret=null;
       int _count=0;
